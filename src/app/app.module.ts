@@ -16,6 +16,8 @@ import { NormeDetailsComponent } from './norme-details/norme-details.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { FournisseurComponent } from './fournisseur/fournisseur.component';
+import { AjoutFournisseurComponent } from './fournisseur/ajout-fournisseur/ajout-fournisseur.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { AddUserComponent } from './add-user/add-user.component';
     NormeDetailsComponent,
     UsersComponent,
     UserDetailsComponent,
-    AddUserComponent
+    AddUserComponent,
+    FournisseurComponent,
+    AjoutFournisseurComponent
   ],
   imports: [
     BrowserModule,

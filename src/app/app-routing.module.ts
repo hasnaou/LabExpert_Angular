@@ -9,6 +9,8 @@ import { AddNormeComponent } from './add-norme/add-norme.component';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import {FournisseurComponent} from "./fournisseur/fournisseur.component";
+import {AjoutFournisseurComponent} from "./fournisseur/ajout-fournisseur/ajout-fournisseur.component";
 
 const routes: Routes = [
   {path: "patients", component: PatientsComponent},
@@ -19,7 +21,10 @@ const routes: Routes = [
   {path: "add-norme", component: AddNormeComponent},
   {path: "users", component: UsersComponent},
   {path: "add-user", component: AddUserComponent},
-  {path: "user-details/:id", component: UserDetailsComponent}
+  {path: "user-details/:id", component: UserDetailsComponent},
+  {path: "fournisseurs", component: FournisseurComponent},
+  {path: "addfournisseur", component: AjoutFournisseurComponent}
+
 ];
 
 @NgModule({
