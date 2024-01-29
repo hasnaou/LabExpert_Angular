@@ -27,6 +27,19 @@ import { SearchPatientPipe } from './pipe/search-patient.pipe';
 import { SearchEchantillonPipe } from './pipe/search-echantillon.pipe';
 import { EchantillonDetailsComponent } from './components/echantillon/echantillon-details/echantillon-details.component';
 import {OutilService} from "./services/outil.service";
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PatientsComponent } from './patients/patients.component';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { DatePipe } from '@angular/common';
+import { FournisseurComponent } from './fournisseur/fournisseur.component';
+import { AjoutFournisseurComponent } from './fournisseur/ajout-fournisseur/ajout-fournisseur.component';
+import {FournisseurService} from "./services/service-fournisseur.service";
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UpdateFournisseurComponent } from './components/fournisseur/update-fournisseur/update-fournisseur.component';
+import {Fournisseur} from "./models/fournisseur";
+import {SearchPipe} from "./pipe/SearchPipe";
 
 @NgModule({
   declarations: [
@@ -57,7 +70,8 @@ import {OutilService} from "./services/outil.service";
     EchantillonDetailsComponent,
     AddPatientComponent,
     FournisseurComponent,
-    AjoutFournisseurComponent
+    AjoutFournisseurComponent,
+    UpdateFournisseurComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +81,8 @@ import {OutilService} from "./services/outil.service";
     SearchPipe,
     ReactiveFormsModule,
     SearchEchantillonPipe
-  ],
+    FormsModule
+    ],
   providers: [
     ReactifService,
     OutilService,
