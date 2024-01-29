@@ -9,6 +9,8 @@ import { AddNormeComponent } from './add-norme/add-norme.component';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import {FournisseurComponent} from "./fournisseur/fournisseur.component";
+import {AjoutFournisseurComponent} from "./fournisseur/ajout-fournisseur/ajout-fournisseur.component";
 
 import { ReactifsComponent } from './components/reactifs/reactifs.component';
 import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
