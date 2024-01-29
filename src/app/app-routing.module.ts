@@ -31,7 +31,9 @@ const routes: Routes = [
   {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
   {path: "echantillons", component: EchantillonComponent},
   {path: "addechantillon", component: AjoutEchantillonComponent},
-  {path: "echantillon-details/:id", component: EchantillonDetailsComponent}
+  {path: "echantillon-details/:id", component: EchantillonDetailsComponent},
+  {path: "fournisseurs", component: FournisseurComponent},
+  {path: "addfournisseur", component: AjoutFournisseurComponent}
 
 ];
 
