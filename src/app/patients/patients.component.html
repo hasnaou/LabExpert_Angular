@@ -18,16 +18,15 @@
                                             <tr>
                                                 <th>Nom Patient</th>
                                                 <th>prenom</th>
-                                                <th class="text-center">détails</th>
-                                                <th class="text-center">Modifier</th>
-                                                <th class="text-center">Supprimmer</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr *ngFor="let patient of patients">
                                                 <td class="text-truncate" style="max-width: 200px;">{{patient.prenom}}</td>
                                                 <td class="text-truncate" style="max-width: 200px;">{{patient.nom}}</td>
-                                                <td class="text-center"><a href="affectation.html"><i class="fa fa-eye fs-5 text-primary"></i></a></td>
+                                                <td class="text-center"><a><i class="fa fa-eye fs-5 text-primary"></i></a></td>
+                                                <td class="text-center"><a><i class="fa fa-trash fs-5 text-primary"></i></a></td>
+                                                <td class="text-center"><a><i class="fa fa-pencil fs-5 text-primary"></i></a></td>
                                             </tr>
                                         </tbody>
                                     </table>
