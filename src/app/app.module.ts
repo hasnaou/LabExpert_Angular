@@ -54,7 +54,10 @@ import {OutilService} from "./services/outil.service";
     EchantillonComponent,
     AjoutEchantillonComponent,
     SearchPatientPipe,
-    EchantillonDetailsComponent
+    EchantillonDetailsComponent,
+    AddPatientComponent,
+    FournisseurComponent,
+    AjoutFournisseurComponent
   ],
   imports: [
     BrowserModule,
