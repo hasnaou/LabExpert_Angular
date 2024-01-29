@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PatientsComponent } from './patients/patients.component';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { NormesComponent } from './normes/normes.component';
@@ -9,8 +8,10 @@ import { AddNormeComponent } from './add-norme/add-norme.component';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import {FournisseurComponent} from "./fournisseur/fournisseur.component";
-import {AjoutFournisseurComponent} from "./fournisseur/ajout-fournisseur/ajout-fournisseur.component";
+import { PatientsComponent } from './components/patients/patients.component';
+import {FournisseurComponent} from "./components/fournisseur/fournisseur.component";
+import {AjoutFournisseurComponent} from "./components/fournisseur/ajout-fournisseur/ajout-fournisseur.component";
+import {UpdateFournisseurComponent} from "./components/fournisseur/update-fournisseur/update-fournisseur.component";
 
 import { ReactifsComponent } from './components/reactifs/reactifs.component';
 import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
