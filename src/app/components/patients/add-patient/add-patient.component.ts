@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Patient } from '../models/patient.model';
-import { PatientService } from '../services/patient.service';
+import { Patient } from '../../../models/patient.model';
+import { PatientService } from '../../../services/patient.service';
 import { DatePipe } from '@angular/common';
 
 
@@ -31,13 +31,12 @@ export class AddPatientComponent implements OnInit {
   savePatient(): void {
     const data = {
       adresse: this.patient.adresse,
-      date_naissance: this.patient.datenaissance,
+      datenaissance: this.patient.datenaissance,
       nom: this.patient.nom,
       prenom: this.patient.prenom,
       sexe: this.patient.sexe,
       tel: this.patient.tel
     }
-    
     this.patientService.create(data)
       .subscribe({
         next: (res) => {

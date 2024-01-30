@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PatientDetailsComponent } from './patient-details/patient-details.component';
-import { AddPatientComponent } from './add-patient/add-patient.component';
 import { NormesComponent } from './normes/normes.component';
 import { NormeDetailsComponent } from './norme-details/norme-details.component';
 import { AddNormeComponent } from './add-norme/add-norme.component';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { PatientDetailsComponent } from './components/patients/patient-details/patient-details.component';
+import { AddPatientComponent } from './components/patients/add-patient/add-patient.component';
 import { PatientsComponent } from './components/patients/patients.component';
 import {FournisseurComponent} from "./components/fournisseur/fournisseur.component";
 import {AjoutFournisseurComponent} from "./components/fournisseur/ajout-fournisseur/ajout-fournisseur.component";
