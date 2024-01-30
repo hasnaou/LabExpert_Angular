@@ -12,6 +12,8 @@ import { PatientsComponent } from './components/patients/patients.component';
 import {FournisseurComponent} from "./components/fournisseur/fournisseur.component";
 import {AjoutFournisseurComponent} from "./components/fournisseur/ajout-fournisseur/ajout-fournisseur.component";
 import {UpdateFournisseurComponent} from "./components/fournisseur/update-fournisseur/update-fournisseur.component";
+import {EchantillonComponent} from "./components/echantillon/echantillon.component";
+import {AjoutEchantillonComponent} from "./components/echantillon/ajout-echantillon/ajout-echantillon.component";
 
 const routes: Routes = [
   {path: "patients", component: PatientsComponent},
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path: "user-details/:id", component: UserDetailsComponent},
   {path: "fournisseurs", component: FournisseurComponent},
   {path: "addfournisseur", component: AjoutFournisseurComponent},
-  {path: "updatefournisseur/:id", component: UpdateFournisseurComponent}
+  {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
+  {path: "echantillons", component: EchantillonComponent},
+  {path: "addechantillon", component: AjoutEchantillonComponent}
 
 ];
 

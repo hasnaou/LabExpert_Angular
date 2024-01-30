@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PatientsComponent } from './patients/patients.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PatientsComponent } from './components/patients/patients.component';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { DatePipe } from '@angular/common';
@@ -15,13 +15,16 @@ import { NormeDetailsComponent } from './norme-details/norme-details.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AddUserComponent } from './add-user/add-user.component';
-import { FournisseurComponent } from './fournisseur/fournisseur.component';
-import { AjoutFournisseurComponent } from './fournisseur/ajout-fournisseur/ajout-fournisseur.component';
+import { FournisseurComponent } from './components/fournisseur/fournisseur.component';
+import { AjoutFournisseurComponent } from './components/fournisseur/ajout-fournisseur/ajout-fournisseur.component';
 import {FournisseurService} from "./services/service-fournisseur.service";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UpdateFournisseurComponent } from './components/fournisseur/update-fournisseur/update-fournisseur.component';
 import {Fournisseur} from "./models/fournisseur";
 import {SearchPipe} from "./pipe/SearchPipe";
+import { EchantillonComponent } from './components/echantillon/echantillon.component';
+import {EchantillonService} from "./services/echantillon.service";
+import { AjoutEchantillonComponent } from './components/echantillon/ajout-echantillon/ajout-echantillon.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import {SearchPipe} from "./pipe/SearchPipe";
     AddUserComponent,
     FournisseurComponent,
     AjoutFournisseurComponent,
-    UpdateFournisseurComponent
+    UpdateFournisseurComponent,
+    EchantillonComponent,
+    AjoutEchantillonComponent
   ],
   imports: [
     BrowserModule,
@@ -47,14 +52,15 @@ import {SearchPipe} from "./pipe/SearchPipe";
     FormsModule
   ],
   providers: [
-    DatePipe
+    DatePipe,
     ReactiveFormsModule,
     FormsModule,
-    SearchPipe
-  ],
-  providers: [
+    SearchPipe,
     FournisseurService,
+    EchantillonService,
     {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'},
+    {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'}
+
   ],
   bootstrap: [AppComponent]
 })
