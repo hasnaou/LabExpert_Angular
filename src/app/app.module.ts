@@ -6,19 +6,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PatientsComponent } from './patients/patients.component';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    PatientsComponent
+    PatientsComponent,
+    PatientDetailsComponent,
+    AddPatientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(private datePipe: DatePipe) {
+    
+   }
+}
