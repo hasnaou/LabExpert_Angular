@@ -9,14 +9,14 @@
             <div>
                 <form *ngIf="currentPatient.id">
                     <label class="form-label">Adresse :&nbsp;</label>
-                    <input class="form-control" type="text" [(ngModel)]="currentPatient.adresse" name="adresse">
+                    <input class="form-control" [disabled]="view" type="text" [(ngModel)]="currentPatient.adresse" name="adresse">
                     <label class="form-label">Date de naissance :&nbsp;</label>
-                    <input class="form-control" type="date" [(ngModel)]="currentPatient.dateNaissance" name="date_naissance">
+                    <input class="form-control" [disabled]="view" type="date" [(ngModel)]="currentPatient.datenaissance" name="datenaissance">
                     <label class="form-label">Sexe :&nbsp;</label>
-                    <input class="form-control" type="text" [(ngModel)]="currentPatient.sexe" name="sexe">
+                    <input class="form-control" [disabled]="view" type="text" [(ngModel)]="currentPatient.sexe" name="sexe">
                     <label class="form-label">Numéro de téléphone :&nbsp;</label>
-                    <input class="form-control" type="text" [(ngModel)]="currentPatient.tel" name="tel">
-                    <input class="btn btn-primary" type="submit" style="transform: translate(400px);margin-top: 18px;" value="Modifier" (click)="updatePatient()" routerLink="/patients">
+                    <input class="form-control" [disabled]="view" type="text" [(ngModel)]="currentPatient.tel" name="tel">
+                    <input class="btn btn-primary" [disabled]="view" type="submit" style="transform: translate(400px);margin-top: 18px;" value="Modifier" (click)="updatePatient()" routerLink="/patients">
                 </form>
             </div>
         </div>

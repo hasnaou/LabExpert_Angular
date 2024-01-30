@@ -8,11 +8,15 @@ import { PatientService } from '../services/patient.service';
   templateUrl: './patient-details.component.html',
   styleUrls: ['./patient-details.component.css']
 })
+
+
 export class PatientDetailsComponent implements OnInit{
+
+  view!: boolean;
 
   @Input() currentPatient: Patient = {
     adresse: '',
-    dateNaissance: new Date(),
+    datenaissance: new Date(),
     nom: '',
     prenom: '',
     sexe: '',
@@ -25,6 +29,10 @@ export class PatientDetailsComponent implements OnInit{
 
   ngOnInit(): void {
     this.getPatient(this.route.snapshot.params["id"]);
+    this.route.queryParams.subscribe((queryParams) => {
+      this.view = queryParams['view'] === 'true';
+      console.log(this.view);
+    });
   }
 
   getPatient(id: string): void{
@@ -39,7 +47,7 @@ export class PatientDetailsComponent implements OnInit{
   }
 
   updatePatient(): void {
-    this.patientService.update(this.currentPatient.id, this.currentPatient)
+    this.patientService.update(this.currentPatient)
       .subscribe({
         next: (res) => {
           console.log(res);
