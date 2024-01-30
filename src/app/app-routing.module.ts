@@ -12,20 +12,24 @@ import { PatientsComponent } from './components/patients/patients.component';
 import {FournisseurComponent} from "./components/fournisseur/fournisseur.component";
 import {AjoutFournisseurComponent} from "./components/fournisseur/ajout-fournisseur/ajout-fournisseur.component";
 import {UpdateFournisseurComponent} from "./components/fournisseur/update-fournisseur/update-fournisseur.component";
-
-import { ReactifsComponent } from './components/reactifs/reactifs.component';
-import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
-import { OutilsComponent } from './components/outils/outils.component';
-import {AddOutilComponent} from "./components/outils/add-outil/add-outil.component";
-import {UtilisateursComponent} from "./components/utilisateurs/utilisateurs.component";
-import {AddUtilisateurComponent} from "./components/utilisateurs/add-utilisateur/add-utilisateur.component";
-import {UpdateUtilisateurComponent} from "./components/utilisateurs/update-utilisateur/update-utilisateur.component";
+import {EchantillonComponent} from "./components/echantillon/echantillon.component";
+import {AjoutEchantillonComponent} from "./components/echantillon/ajout-echantillon/ajout-echantillon.component";
 
 const routes: Routes = [
-  {
-    path: "patients",
-    component: PatientsComponent
-  },
+  {path: "patients", component: PatientsComponent},
+  {path: "patient-details/:id", component: PatientDetailsComponent},
+  {path: "add-patient", component: AddPatientComponent},
+  {path: "normes", component: NormesComponent},
+  {path: "norme-details/:id", component: NormeDetailsComponent},
+  {path: "add-norme", component: AddNormeComponent},
+  {path: "users", component: UsersComponent},
+  {path: "add-user", component: AddUserComponent},
+  {path: "user-details/:id", component: UserDetailsComponent},
+  {path: "fournisseurs", component: FournisseurComponent},
+  {path: "addfournisseur", component: AjoutFournisseurComponent},
+  {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
+  {path: "echantillons", component: EchantillonComponent},
+  {path: "addechantillon", component: AjoutEchantillonComponent},
   {
     path: "Reactif",
     component: ReactifsComponent

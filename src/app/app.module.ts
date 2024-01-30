@@ -38,7 +38,16 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   providers: [
     ReactifService,
-    OutilService
+    OutilService,
+    DatePipe,
+    ReactiveFormsModule,
+    FormsModule,
+    SearchPipe,
+    FournisseurService,
+    EchantillonService,
+    {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'},
+    {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'}
+
   ],
   bootstrap: [AppComponent]
 })
