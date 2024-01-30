@@ -1,9 +1,9 @@
-import { Patient } from '../models/patient.model';
+import { HttpClient } from '@angular/common/http';
+import { Patient } from '../../models/patient.model';
 import { Component, OnInit } from '@angular/core';
-import { PatientService } from '../services/patient.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
-
+import {PatientService} from "../../services/patient.service";
 
 @Component({
   selector: 'app-patients',
@@ -22,7 +22,7 @@ export class PatientsComponent implements OnInit{
   ngOnInit(): void {
     this.retrievePatients();
   }
-  
+
   retrievePatients(): void {
     this.patientService.getAll()
       .subscribe({

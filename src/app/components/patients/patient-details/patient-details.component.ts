@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Patient } from '../models/patient.model';
-import { PatientService } from '../services/patient.service';
 import { DatePipe } from '@angular/common';
 
+import { Patient } from '../../../models/patient.model';
+import { PatientService } from '../../../services/patient.service';
 
 @Component({
   selector: 'app-patient-details',
