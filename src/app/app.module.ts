@@ -23,6 +23,7 @@ import { SearchPipe } from "./pipe/SearchPipe";
 import { EchantillonComponent } from './components/echantillon/echantillon.component';
 import { EchantillonService} from "./services/echantillon.service";
 import { AjoutEchantillonComponent } from './components/echantillon/ajout-echantillon/ajout-echantillon.component';
+import { SearchPatientPipe } from './pipe/search-patient.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,21 @@ import { AjoutEchantillonComponent } from './components/echantillon/ajout-echant
     AddOutilComponent,
     UtilisateursComponent,
     AddUtilisateurComponent,
-    UpdateUtilisateurComponent
+    UpdateUtilisateurComponent,
+    PatientDetailsComponent,
+    AddPatientComponent,
+    NormesComponent,
+    AddNormeComponent,
+    NormeDetailsComponent,
+    UsersComponent,
+    UserDetailsComponent,
+    AddUserComponent,
+    FournisseurComponent,
+    AjoutFournisseurComponent,
+    UpdateFournisseurComponent,
+    EchantillonComponent,
+    AjoutEchantillonComponent,
+    SearchPatientPipe
   ],
   imports: [
     BrowserModule,
