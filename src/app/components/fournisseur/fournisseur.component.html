@@ -1,7 +1,8 @@
  <div class="card shadow" style="margin-top: 55px;">
         <div class="card-header d-flex flex-wrap justify-content-center align-items-center justify-content-sm-between gap-3" style="margin-top: 0px;"><a href="/addfournisseur" class="btn btn-primary" type="button">Ajouter Fournisseur</a>
           <h5 class="display-6 text-nowrap text-capitalize mb-0">Liste Fournisseur</h5>
-          <div class="input-group input-group-sm w-auto"><input [(ngModel)]="searchText" class="form-control form-control-sm" (keyup)="$event.target" type="text">
+          <div class="input-group input-group-sm w-auto">
+            <input [(ngModel)]="searchText" class="form-control form-control-sm" (keyup)="$event.target" type="text">
            </div>
         </div>
         <div class="card-body">

@@ -1,7 +1,9 @@
+import {Patient} from "./patient.model";
+
 export interface Echantillon {
     idEchantillon:number;
-    //idPatient:number;
-    //idUtilisateur:number;
+    patient:Patient;
+    utilisateur:any;
     datePrelevement:string;
     typeAnalyse:string;
     Status:string;
