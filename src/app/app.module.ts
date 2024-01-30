@@ -37,11 +37,19 @@ import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { AjoutFournisseurComponent } from './fournisseur/ajout-fournisseur/ajout-fournisseur.component';
 import {FournisseurService} from "./services/service-fournisseur.service";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PatientsComponent } from './components/patients/patients.component';
+import { PatientDetailsComponent } from './components/patients/patient-details/patient-details.component';
+import { AddPatientComponent } from './components/patients/add-patient/add-patient.component';
+import { FournisseurComponent } from './components/fournisseur/fournisseur.component';
+import { AjoutFournisseurComponent } from './components/fournisseur/ajout-fournisseur/ajout-fournisseur.component';
+import { FournisseurService } from "./services/service-fournisseur.service";
 import { UpdateFournisseurComponent } from './components/fournisseur/update-fournisseur/update-fournisseur.component';
-import {Fournisseur} from "./models/fournisseur";
-import {SearchPipe} from "./pipe/SearchPipe";
+import { SearchPipe } from "./pipe/SearchPipe";
 import { EchantillonComponent } from './components/echantillon/echantillon.component';
-import {EchantillonService} from "./services/echantillon.service";
+import { EchantillonService} from "./services/echantillon.service";
 import { AjoutEchantillonComponent } from './components/echantillon/ajout-echantillon/ajout-echantillon.component';
 
 @NgModule({
@@ -95,8 +103,7 @@ import { AjoutEchantillonComponent } from './components/echantillon/ajout-echant
     {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'},
     {provide: 'url_patient', useValue: 'http://localhost:8080/api/v1/patient'},
     {provide: 'url_outil', useValue: 'http://localhost:8080/api/v1/outil'},
-    {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'},
-    {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'},
+    {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'}
   ],
 
   bootstrap: [AppComponent]
