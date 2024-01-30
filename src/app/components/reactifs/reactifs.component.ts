@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ReactifService} from "../../services/reactif.service";
+import {Reactif} from "../../models/reactif";
 
 @Component({
   selector: 'app-reactifs',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReactifsComponent implements OnInit {
 
-  constructor() { }
+  reactifs:Reactif[]=[];
+
+
+  constructor(
+    private reactifService: ReactifService
+  ) { }
 
   ngOnInit(): void {
   }
