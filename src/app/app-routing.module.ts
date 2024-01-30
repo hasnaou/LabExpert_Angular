@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PatientsComponent } from './patients/patients.component';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
 
 import { ReactifsComponent } from './components/reactifs/reactifs.component';
 import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
