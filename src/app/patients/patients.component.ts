@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Patient } from '../models/patient.model';
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../services/patient.service';

@@ -19,7 +19,7 @@
                                             <tr *ngFor="let patient of patients">
                                                 <td class="text-truncate" style="max-width: 200px;">{{patient.prenom}}</td>
                                                 <td class="text-truncate" style="max-width: 200px;">{{patient.nom}}</td>
-                                                <td class="text-center"><a [routerLink]="['/patient-details', patient.id]"><i class="fa fa-eye fs-5 text-primary"></i></a></td>
+                                                <td class="text-center"><a [routerLink]="['/patient-details', patient.id]" [queryParams]="{ view: true}"><i class="fa fa-eye fs-5 text-primary"></i></a></td>
                                                 <td class="text-center"><a><i (click)="deletePatient(patient.id)" class="fa fa-trash fs-5 text-primary"></i></a></td>
                                                 <td class="text-center"><a [routerLink]="['/patient-details', patient.id]"><i class="fa fa-pencil fs-5 text-primary"></i></a></td>
                                             </tr>
