@@ -51,6 +51,7 @@ import { SearchPipe } from "./pipe/SearchPipe";
 import { EchantillonComponent } from './components/echantillon/echantillon.component';
 import { EchantillonService} from "./services/echantillon.service";
 import { AjoutEchantillonComponent } from './components/echantillon/ajout-echantillon/ajout-echantillon.component';
+import { SearchPatientPipe } from './pipe/search-patient.pipe';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { AjoutEchantillonComponent } from './components/echantillon/ajout-echant
     AjoutFournisseurComponent,
     UpdateFournisseurComponent,
     EchantillonComponent,
-    AjoutEchantillonComponent
+    AjoutEchantillonComponent,
+    SearchPatientPipe
   ],
   imports: [
     BrowserModule,
