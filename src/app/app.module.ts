@@ -40,6 +40,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UpdateFournisseurComponent } from './components/fournisseur/update-fournisseur/update-fournisseur.component';
 import {Fournisseur} from "./models/fournisseur";
 import {SearchPipe} from "./pipe/SearchPipe";
+import { EchantillonComponent } from './components/echantillon/echantillon.component';
+import {EchantillonService} from "./services/echantillon.service";
+import { AjoutEchantillonComponent } from './components/echantillon/ajout-echantillon/ajout-echantillon.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,9 @@ import {SearchPipe} from "./pipe/SearchPipe";
     AddPatientComponent,
     FournisseurComponent,
     AjoutFournisseurComponent,
-    UpdateFournisseurComponent
+    UpdateFournisseurComponent,
+    EchantillonComponent,
+    AjoutEchantillonComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +78,7 @@ import {SearchPipe} from "./pipe/SearchPipe";
     FormsModule,
     SearchPipe,
     ReactiveFormsModule,
-    SearchEchantillonPipe
+    SearchEchantillonPipe,
     FormsModule
     ],
   providers: [
@@ -89,8 +94,9 @@ import {SearchPipe} from "./pipe/SearchPipe";
     {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'},
     {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'},
     {provide: 'url_patient', useValue: 'http://localhost:8080/api/v1/patient'},
-    {provide: 'url_outil', useValue: 'http://localhost:8080/api/v1/outil'}
-
+    {provide: 'url_outil', useValue: 'http://localhost:8080/api/v1/outil'},
+    {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'},
+    {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'},
   ],
 
   bootstrap: [AppComponent]
