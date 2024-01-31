@@ -10,6 +10,7 @@ import {EchantillonService} from "../../services/echantillon.service";
 export class EchantillonComponent implements OnInit {
 
   echantillons!:any;
+  searchech: '';
   constructor(private echantillonService:EchantillonService) { }
 
   ngOnInit(): void {

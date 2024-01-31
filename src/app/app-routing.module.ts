@@ -14,6 +14,7 @@ import {AjoutFournisseurComponent} from "./components/fournisseur/ajout-fourniss
 import {UpdateFournisseurComponent} from "./components/fournisseur/update-fournisseur/update-fournisseur.component";
 import {EchantillonComponent} from "./components/echantillon/echantillon.component";
 import {AjoutEchantillonComponent} from "./components/echantillon/ajout-echantillon/ajout-echantillon.component";
+import {EchantillonDetailsComponent} from "./components/echantillon/echantillon-details/echantillon-details.component";
 
 const routes: Routes = [
   {path: "patients", component: PatientsComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: "addfournisseur", component: AjoutFournisseurComponent},
   {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
   {path: "echantillons", component: EchantillonComponent},
-  {path: "addechantillon", component: AjoutEchantillonComponent}
+  {path: "addechantillon", component: AjoutEchantillonComponent},
+  {path: "echantillon-details/:id", component: EchantillonDetailsComponent}
 
 ];
 

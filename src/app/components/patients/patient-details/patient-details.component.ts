@@ -18,7 +18,7 @@ export class PatientDetailsComponent implements OnInit{
 
   @Input() currentPatient: Patient = {
     adresse: '',
-    datenaissance: new Date(),
+    dateNaissance: new Date(),
     nom: '',
     prenom: '',
     sexe: '',

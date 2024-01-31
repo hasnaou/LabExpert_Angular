@@ -14,7 +14,7 @@ export class AddPatientComponent implements OnInit {
 
   patient: Patient = {
     adresse: '',
-    datenaissance: new Date(),
+    dateNaissance: new Date(),
     nom: '',
     prenom: '',
     sexe: '',
@@ -31,7 +31,7 @@ export class AddPatientComponent implements OnInit {
   savePatient(): void {
     const data = {
       adresse: this.patient.adresse,
-      datenaissance: this.patient.datenaissance,
+      dateNaissance: this.patient.dateNaissance,
       nom: this.patient.nom,
       prenom: this.patient.prenom,
       sexe: this.patient.sexe,

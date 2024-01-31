@@ -1,12 +1,13 @@
 import {Patient} from "./patient.model";
+import {StatusEchantillon} from "../enum/status-echantillon";
 
 export interface Echantillon {
     idEchantillon:number;
     patient:Patient;
     utilisateur:any;
-    datePrelevement:string;
+    datePrelevement:Date;
     typeAnalyse:string;
-    Status:string;
+    status:StatusEchantillon;
   //private  analyses;
   //private  outilEchantillonList;
 }

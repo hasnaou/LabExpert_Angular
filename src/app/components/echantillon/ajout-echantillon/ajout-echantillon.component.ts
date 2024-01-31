@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PatientService} from "../../../services/patient.service";
 import {EchantillonService} from "../../../services/echantillon.service";
 import {Patient} from "../../../models/patient.model";
 import {Echantillon} from "../../../models/echantillon";
+import {StatusEchantillon} from "../../../enum/status-echantillon";
 
 @Component({
   selector: 'app-ajout-echantillon',
@@ -19,9 +20,9 @@ export class AjoutEchantillonComponent implements OnInit {
     idEchantillon:0,
     patient:new Patient(),
     utilisateur:"{id: 69}",
-    datePrelevement:'',
+    datePrelevement:new Date("2024-02-11"),
     typeAnalyse:'',
-    Status:''
+    status:StatusEchantillon.EnAttente
   }
   constructor(private patientService:PatientService,private echantillonService:EchantillonService) { }
 
@@ -50,7 +51,7 @@ export class AjoutEchantillonComponent implements OnInit {
           utilisateur:{"id": 69},
           datePrelevement: this.echantillon.datePrelevement,
           typeAnalyse: this.echantillon.typeAnalyse,
-          Status: "ENATTENTE",
+          status: StatusEchantillon.EnAttente,
         }
         this.echantillonService.addEchantillon(data).subscribe({
           next: (res) => {
