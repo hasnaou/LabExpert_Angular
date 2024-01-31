@@ -36,7 +36,8 @@ const routes: Routes = [
   {path: "addfournisseur", component: AjoutFournisseurComponent},
   {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
   {path: "echantillons", component: EchantillonComponent},
-  {path: "addechantillon", component: AjoutEchantillonComponent}
+  {path: "addechantillon", component: AjoutEchantillonComponent},
+  {path: "echantillon-details/:id", component: EchantillonDetailsComponent}
 
 ];
 
