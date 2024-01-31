@@ -4,6 +4,7 @@ import { DatePipe } from '@angular/common';
 
 import { Patient } from '../../../models/patient.model';
 import { PatientService } from '../../../services/patient.service';
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-patient-details',
@@ -27,7 +28,7 @@ export class PatientDetailsComponent implements OnInit{
 
   message = '';
 
-  constructor(private patientService: PatientService, private route: ActivatedRoute, private router: Router, private datePipe: DatePipe) { }
+  constructor(private patientService: PatientService,private datePipe: DatePipe, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getPatient(this.route.snapshot.params["id"]);
@@ -42,7 +43,8 @@ export class PatientDetailsComponent implements OnInit{
       .subscribe({
         next: (data) => {
           this.currentPatient = data;
-          // this.currentPatient.datenaissance = this.datePipe.transform(this.currentPatient.datenaissance, 'yyyy-MM-dd')
+          // @ts-ignore
+          this.currentPatient.dateNaissance=this.datePipe.transform(this.currentPatient.dateNaissance, 'yyyy-MM-dd');
           console.log(data)
         },
         error: (e) => console.error(e)

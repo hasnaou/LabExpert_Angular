@@ -34,16 +34,15 @@
         <input class="form-control" type="date" name="datePrelevement" [(ngModel)]="echantillon.datePrelevement" style="display: inline-block;">
         <label class="form-label" style="margin-top: 8px;margin-bottom: 15px;">Nom analyse:</label>
         <input class="form-control" type="text" name="typeAnalyse" [(ngModel)]="echantillon.typeAnalyse">
+        <div style="border: 1px solid ;margin-top: 10px; margin-bottom: 10px;padding: 10px;">
         <label class="form-label">Liste Materiel</label>
-        <select class="form-select">
-          <optgroup label="This is a group">
-            <option value="12" selected="">This is item 1</option>
-            <option value="13">This is item 2</option>
-            <option value="14">This is item 3</option>
-          </optgroup>
+        <select class="form-select" [(ngModel)]="selectedOutil" name="outil">
+            <option *ngFor="let outil of outils" [ngValue]="outil"> {{outil.libelle}}</option>
       </select>
         <label class="form-label">Quantite</label>
-        <input class="form-control" type="text" name="quantite">
+        <input class="form-control" type="text" [(ngModel)]="selectedOutilQuantite" name="quantite">
+          <button class="btn btn-info" style="margin: 20px;" (click)="addtomateriel()">Add Autre Materiel</button>
+        </div>
         <input class="btn btn-primary" type="submit" (click)="addechantillon()" style="margin-top: 8px;">
       </form>
     </div>
