@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Patient } from '../models/patient.model';
 import { PatientService } from '../services/patient.service';
+import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-patient-details',
@@ -25,7 +27,7 @@ export class PatientDetailsComponent implements OnInit{
 
   message = '';
 
-  constructor(private patientService: PatientService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private patientService: PatientService, private route: ActivatedRoute, private router: Router, private datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.getPatient(this.route.snapshot.params["id"]);
@@ -35,11 +37,12 @@ export class PatientDetailsComponent implements OnInit{
     });
   }
 
-  getPatient(id: string): void{
+  getPatient(id: number): void {
     this.patientService.get(id)
       .subscribe({
         next: (data) => {
           this.currentPatient = data;
+          // this.currentPatient.datenaissance = this.datePipe.transform(this.currentPatient.datenaissance, 'yyyy-MM-dd')
           console.log(data)
         },
         error: (e) => console.error(e)
@@ -51,7 +54,7 @@ export class PatientDetailsComponent implements OnInit{
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.message = res.message ? res.message : 'Le statut a été mis à jour avec succès !'
+          this.message = res.message ? res.message : 'Le patient a été mis à jour avec succès !'
         },
         error: (e) => console.error(e)
       });

@@ -10,6 +10,9 @@ import { PatientDetailsComponent } from './patient-details/patient-details.compo
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { NormesComponent } from './normes/normes.component';
+import { AddNormeComponent } from './add-norme/add-norme.component';
+import { NormeDetailsComponent } from './norme-details/norme-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DatePipe } from '@angular/common';
     DashboardComponent,
     PatientsComponent,
     PatientDetailsComponent,
-    AddPatientComponent
+    AddPatientComponent,
+    NormesComponent,
+    AddNormeComponent,
+    NormeDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Patient } from '../models/patient.model';
+import { Norme } from '../models/norme.model';
 
-const baseUrl = 'http://localhost:8080/api/v1/patient';
+const baseUrl = 'http://localhost:8080/api/v1/norme'
 
 @Injectable({
   providedIn: 'root'
 })
-export class PatientService {
+export class NormeService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Patient[]> {
-    return this.http.get<Patient[]>(baseUrl);
+  getAll(): Observable<Norme[]> {
+    return this.http.get<Norme[]>(baseUrl);
   }
 
-  get(id: any): Observable<Patient> {
-    return this.http.get<Patient>(`${baseUrl}/${id}`);
+  get(id: any): Observable<Norme> {
+    return this.http.get<Norme>(`${baseUrl}/${id}`);
   }
 
   create(data: any): Observable<any> {    
