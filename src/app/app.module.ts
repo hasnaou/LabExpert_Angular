@@ -26,6 +26,7 @@ import { AjoutEchantillonComponent } from './components/echantillon/ajout-echant
 import { SearchPatientPipe } from './pipe/search-patient.pipe';
 import { SearchEchantillonPipe } from './pipe/search-echantillon.pipe';
 import { EchantillonDetailsComponent } from './components/echantillon/echantillon-details/echantillon-details.component';
+import {OutilService} from "./services/outil.service";
 
 @NgModule({
   declarations: [
@@ -66,8 +67,11 @@ import { EchantillonDetailsComponent } from './components/echantillon/echantillo
     SearchPipe,
     FournisseurService,
     EchantillonService,
+    OutilService,
     {provide: 'url_fournisseur', useValue: 'http://localhost:8080/api/v1/fournisseur'},
-    {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'}
+    {provide: 'url_echantillon', useValue: 'http://localhost:8080/api/v1/echantillon'},
+    {provide: 'url_patient', useValue: 'http://localhost:8080/api/v1/patient'},
+    {provide: 'url_outil', useValue: 'http://localhost:8080/api/v1/outil'}
 
   ],
 

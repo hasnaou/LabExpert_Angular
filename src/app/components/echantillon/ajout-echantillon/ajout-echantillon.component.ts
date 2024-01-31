@@ -4,6 +4,9 @@ import {EchantillonService} from "../../../services/echantillon.service";
 import {Patient} from "../../../models/patient.model";
 import {Echantillon} from "../../../models/echantillon";
 import {StatusEchantillon} from "../../../enum/status-echantillon";
+import {OutilEchantillon} from "../../../models/outil-echantillon";
+import {OutilService} from "../../../services/outil.service";
+import {Outil} from "../../../models/outil";
 
 @Component({
   selector: 'app-ajout-echantillon',
@@ -15,8 +18,21 @@ export class AjoutEchantillonComponent implements OnInit {
   search= '';
   showddiv=false;
   patient:Patient;
+  outils:Outil[];
+  selectedOutilQuantite:number=0;
+  selectedOutil:Outil={
+    idOutil:0,
+    quantite:0,
+    libelle:''
+};
+  selectedOutillist:OutilEchantillon={
+    outil:this.selectedOutil,
+    quantite:0
+  };
+  listmateriel:OutilEchantillon[]=[];
   submitted=false;
   echantillon: Echantillon = {
+    outilEchantillonList:[],
     idEchantillon:0,
     patient:new Patient(),
     utilisateur:"{id: 69}",
@@ -24,11 +40,20 @@ export class AjoutEchantillonComponent implements OnInit {
     typeAnalyse:'',
     status:StatusEchantillon.EnAttente
   }
-  constructor(private patientService:PatientService,private echantillonService:EchantillonService) { }
+  constructor(private patientService:PatientService,private echantillonService:EchantillonService,private outilService:OutilService) { }
 
 
   ngOnInit(): void {
     this.retrievePatients();
+    this.outilService.getmateriels().subscribe(
+      // @ts-ignore
+      data=>this.outils=data,
+      error => {
+        console.log(error)},
+      () => {
+        //console.log(this.outils);
+      }
+    );
   }
   retrievePatients(): void {
     this.patientService.getAll()
@@ -45,6 +70,7 @@ export class AjoutEchantillonComponent implements OnInit {
     this.showddiv=true;
   }
   addechantillon(){
+    console.log(this.echantillon.outilEchantillonList);
         const data={
           idEchantillon: null,
           patient: this.patient,
@@ -52,6 +78,7 @@ export class AjoutEchantillonComponent implements OnInit {
           datePrelevement: this.echantillon.datePrelevement,
           typeAnalyse: this.echantillon.typeAnalyse,
           status: StatusEchantillon.EnAttente,
+          outilEchantillonList: this.echantillon.outilEchantillonList
         }
         this.echantillonService.addEchantillon(data).subscribe({
           next: (res) => {
@@ -61,5 +88,12 @@ export class AjoutEchantillonComponent implements OnInit {
           error: (e) => console.error(e)
         });
     //console.log(data);
+  }
+  addtomateriel(){
+    //console.log(this.selectedOutil.idOutil);
+    this.selectedOutillist.outil=this.selectedOutil;
+    this.selectedOutillist.quantite=this.selectedOutilQuantite;
+    this.listmateriel.push(this.selectedOutillist)
+    console.log(this.listmateriel);
   }
 }

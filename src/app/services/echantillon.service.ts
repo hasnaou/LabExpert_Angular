@@ -14,6 +14,7 @@ export class EchantillonService {
   }
 
   public addEchantillon(echantillon:Echantillon){
+
     return this.http.post(this.url,echantillon);
   }
   public getEchantillonById(id:number):Observable<Echantillon>{

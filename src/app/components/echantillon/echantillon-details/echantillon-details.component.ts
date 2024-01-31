@@ -20,6 +20,7 @@ export class EchantillonDetailsComponent implements OnInit {
   patient:Patient;
   submitted=false;
   @Input() echantillon: Echantillon = {
+    outilEchantillonList: null,
     idEchantillon:0,
     patient:new Patient(),
     utilisateur:"{id: 69}",
@@ -59,6 +60,7 @@ export class EchantillonDetailsComponent implements OnInit {
       datePrelevement: this.echantillon.datePrelevement,
       typeAnalyse: this.echantillon.typeAnalyse,
       status: this.echantillon.status,
+      outilEchantillonList: null
     }
     this.echantillonService.updateEchantillon(data).subscribe({
       next: (res) => {
