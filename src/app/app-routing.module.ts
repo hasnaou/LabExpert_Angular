@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PatientsComponent } from './patients/patients.component';
 import { ReactifsComponent } from './components/reactifs/reactifs.component';
 import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
-import { FournisseurComponent } from './components/fournisseur/fournisseur.component';
-import {AddFournisseurComponent} from "./components/fournisseur/add-fournisseur/add-fournisseur.component";
+import { OutilsComponent } from './components/outils/outils.component';
+import {AddOutilComponent} from "./components/outils/add-outil/add-outil.component";
 
 const routes: Routes = [
   {
@@ -20,14 +20,13 @@ const routes: Routes = [
     component: AddReactifComponent
   },
   {
-    path: "Fornisseur",
-    component: FournisseurComponent
+    path: "Outil",
+    component: OutilsComponent
   },
   {
-    path: "AddFornisseur",
-    component: AddFournisseurComponent
-  },
-  // {path: "UpdateReactif/:id", component: UpdateFournisseurComponent},
+    path: "AddOutil",
+    component: AddOutilComponent
+  }
 ];
 
 @NgModule({

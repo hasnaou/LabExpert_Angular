@@ -9,6 +9,11 @@ import { PatientsComponent } from './patients/patients.component';
 import { ReactifsComponent } from './components/reactifs/reactifs.component';
 import { AddReactifComponent } from './components/reactifs/add-reactif/add-reactif.component';
 import {ReactifService} from "./services/reactif.service";
+import {OutilService} from "./services/outil.service";
+import { OutilsComponent } from './components/outils/outils.component';
+import { AddOutilComponent } from './components/outils/add-outil/add-outil.component';
+import { UtilisateursComponent } from './components/utilisateurs/utilisateurs.component';
+import { AddUtilisateurComponent } from './components/utilisateurs/add-utilisateur/add-utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -16,15 +21,20 @@ import {ReactifService} from "./services/reactif.service";
     DashboardComponent,
     PatientsComponent,
     ReactifsComponent,
-    AddReactifComponent
+    AddReactifComponent,
+    OutilsComponent,
+    AddOutilComponent,
+    UtilisateursComponent,
+    AddUtilisateurComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
-    ],
+  ],
   providers: [
-    ReactifService
+    ReactifService,
+    OutilService
   ],
   bootstrap: [AppComponent]
 })
