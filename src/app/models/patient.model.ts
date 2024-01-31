@@ -1,7 +1,7 @@
 export class Patient {
     id?: any;
     adresse?: string;
-    datenaissance?: Date;
+    dateNaissance?: Date;
     nom?: string;
     prenom?: string;
     sexe?: string;
