@@ -14,6 +14,10 @@
                         <th>Libelle</th>
                         <th>Valeur maximum</th>
                         <th>Valeur minimum</th>
+                        <th>Unite</th>
+                      <th></th>
+                        <th>Action</th>
+                      <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,8 +25,10 @@
                         <td class="text-truncate" style="max-width: 200px;">{{norme.libelle}}</td>
                         <td class="text-truncate" style="max-width: 200px;">{{norme.maxValue}}</td>
                         <td class="text-truncate" style="max-width: 200px;">{{norme.minValue}}</td>
-                        <td class="text-center"><a><i (click)="deleteNorme(norme.id)" class="fa fa-trash fs-5 text-primary"></i></a></td>
-                        <td class="text-center"><a [routerLink]="['/norme-details', norme.id]"><i class="fa fa-pencil fs-5 text-primary"></i></a></td>
+                        <td class="text-truncate" style="max-width: 200px;">{{norme.unite}}</td>
+                        <td class="text-center"><a><i (click)="deleteNorme(norme)" class="fa fa-trash fs-5 text-primary"></i></a></td>
+                        <td class="text-center"><a [routerLink]="['/norme-details', norme.idNorme]"><i class="fa fa-pencil fs-5 text-primary"></i></a></td>
+                   <td></td>
                     </tr>
                 </tbody>
             </table>

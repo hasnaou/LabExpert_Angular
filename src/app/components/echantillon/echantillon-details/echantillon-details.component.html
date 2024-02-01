@@ -63,9 +63,9 @@
           <input class="form-control" type="date" name="datePrelevement" [(ngModel)]="echantillon.datePrelevement" style="display: inline-block;">
           <label class="form-label" style="margin-top: 8px;margin-bottom: 15px;">Nom analyse:</label>
           <input class="form-control" type="text" name="typeAnalyse" [(ngModel)]="echantillon.typeAnalyse">
-          <label class="form-label">Status: {{StatusEchantillon[echantillon.status]}}</label>
+          <label class="form-label">Status: {{echantillon.status}}</label>
           <select class="form-select" [(ngModel)]="echantillon.status" name="status">
-              <option *ngFor="let key of [0,1,2]" [value]="key">{{StatusEchantillon[key]}}</option>
+              <option *ngFor="let key of [0,1,2]" [value]="key">{{echantillon.status}}</option>
           </select>
           <input class="btn btn-primary" type="submit" (click)="updateechantillon()" style="margin-top: 8px;" [routerLink]="['/echantillons']">
         </form>

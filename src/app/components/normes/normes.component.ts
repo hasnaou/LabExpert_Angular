@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NormeService } from '../services/norme.service';
-import { Norme } from '../models/norme.model';
+import { NormeService } from '../../services/norme.service';
+import { Norme } from '../../models/norme.model';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NormesComponent implements OnInit {
 
-  normes?: Norme[];
+  normes: Norme[];
   currentNorme: Norme = {};
   currentIndex= -1;
 
@@ -32,15 +32,17 @@ export class NormesComponent implements OnInit {
       })
   }
 
-  deleteNorme(id: number): void {
-    this.normeService.delete(id)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.router.navigate(['/normes'])
+  deleteNorme(n:Norme): void {
+    if(confirm("Voulez vous supprimer cette Norme?")){
+      this.normeService.delete(n.idNorme).subscribe(
+        () => {
+          console.log('Norme supprime avec succes');
+          this.normes.splice(this.normes.indexOf(n));
         },
-        error: (e) => console.error(e)
-      })
+        (error) => {
+          console.error('Erreur lors de la suppression du Norme', error);
+        });
+    }
   }
 
 }

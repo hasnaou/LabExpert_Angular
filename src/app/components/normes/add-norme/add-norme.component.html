@@ -5,13 +5,13 @@
             <div>
                 <form *ngIf="!submitted">
                     <label class="form-label">libelle :&nbsp;</label>
-                    <input class="form-control" type="text" required [(ngModel)]="norme.libelle" name="nom">
+                    <input class="form-control" type="text" required [(ngModel)]="norme.libelle" name="libelle">
                     <label class="form-label">La valeur maximum :&nbsp;</label>
-                    <input class="form-control" type="text" required [(ngModel)]="norme.maxValue" name="prenom">
+                    <input class="form-control" type="text" required [(ngModel)]="norme.maxValue" name="maxValue">
                     <label class="form-label">La valeur minimum :&nbsp;</label>
-                    <input class="form-control" type="text" required [(ngModel)]="norme.minValue" name="adresse">
+                    <input class="form-control" type="text" required [(ngModel)]="norme.minValue" name="minValue">
                     <label class="form-label">unité  :&nbsp;</label>
-                    <input class="form-control" type="text" required [(ngModel)]="norme.unite" name="datenaissance">
+                    <input class="form-control" type="text" required [(ngModel)]="norme.unite" name="unite">
                     <input class="btn btn-primary" type="submit" style="transform: translate(400px);margin-top: 18px;" value="Enregistrer" (click)="saveNorme()" routerLink="/normes">
                 </form>
             </div>

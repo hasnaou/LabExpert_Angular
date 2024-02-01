@@ -5,7 +5,7 @@
                 <label class="form-label text-center text-primary" style="display: block;"><br>Détails de Normes<br><br><br></label>
             </div>
             <div>
-                <form *ngIf="currentNorme.id">
+                <form *ngIf="currentNorme.idNorme">
                     <label class="form-label">libelle :&nbsp;</label>
                     <input class="form-control" type="text" [(ngModel)]="currentNorme.libelle" name="libelle">
                     <label class="form-label">La valeur minimum :&nbsp;</label>

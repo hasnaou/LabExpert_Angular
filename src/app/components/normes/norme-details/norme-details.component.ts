@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Norme } from '../models/norme.model';
-import { NormeService } from '../services/norme.service';
+import { Norme } from '../../../models/norme.model';
+import { NormeService } from '../../../services/norme.service';
 
 @Component({
   selector: 'app-norme-details',
@@ -44,7 +44,9 @@ export class NormeDetailsComponent implements OnInit {
           console.log(res);
           this.message = res.message ? res.message : 'La norme a été mis à jour avec succès !'
         },
-        error: (e) => console.error(e)
+        error: (e) => console.error(e),
+        // @ts-ignore
+        complete:()=>this.router.navigate(['/normes'])
       });
   }
 

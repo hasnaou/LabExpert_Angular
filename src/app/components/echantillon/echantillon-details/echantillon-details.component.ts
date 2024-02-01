@@ -62,6 +62,7 @@ export class EchantillonDetailsComponent implements OnInit {
       status: this.echantillon.status,
       outilEchantillonList: null
     }
+    console.log(data.status);
     this.echantillonService.updateEchantillon(data).subscribe({
       next: (res) => {
         //console.log(res);
