@@ -11,8 +11,8 @@ export class AddNormeComponent implements OnInit {
 
   norme: Norme = {
     libelle: '',
-    maxvalue: 0,
-    minvalue: 0,
+    maxValue: 0,
+    minValue: 0,
     unite: ''
   }
 
@@ -26,8 +26,8 @@ export class AddNormeComponent implements OnInit {
   saveNorme(): void {
     const data = {
       libelle: this.norme.libelle,
-      maxvalue: this.norme.maxvalue,
-      minvalue: this.norme.minvalue,
+      maxvalue: this.norme.maxValue,
+      minvalue: this.norme.minValue,
       unite: this.norme.unite
     }
 

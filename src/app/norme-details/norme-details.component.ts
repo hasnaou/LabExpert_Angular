@@ -12,8 +12,8 @@ export class NormeDetailsComponent implements OnInit {
 
   @Input() currentNorme: Norme = {
     libelle: '',
-    maxvalue: 0,
-    minvalue: 0,
+    maxValue: 0,
+    minValue: 0,
     unite: ''
   };
 

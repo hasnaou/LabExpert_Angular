@@ -1,7 +1,7 @@
 export interface Norme {
     id?: any;
     libelle?: string;
-    maxvalue?: number;
-    minvalue?: number;
+    maxValue?: number;
+    minValue?: number;
     unite?: string;
 }

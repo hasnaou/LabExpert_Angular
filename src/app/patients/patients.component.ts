@@ -28,7 +28,6 @@ export class PatientsComponent implements OnInit{
       .subscribe({
         next: (data) => {
           this.patients = data;
-          // this.currentPatient.datenaissance = this.datePipe.transform(this.currentPatient.datenaissance, 'yyyy-MM-dd')
           console.log(data);
         },
         error: (e) => console.error(e)

@@ -13,6 +13,7 @@ import { DatePipe } from '@angular/common';
 import { NormesComponent } from './normes/normes.component';
 import { AddNormeComponent } from './add-norme/add-norme.component';
 import { NormeDetailsComponent } from './norme-details/norme-details.component';
+import { AnalysesComponent } from './analyses/analyses.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NormeDetailsComponent } from './norme-details/norme-details.component';
     AddPatientComponent,
     NormesComponent,
     AddNormeComponent,
-    NormeDetailsComponent
+    NormeDetailsComponent,
+    AnalysesComponent
   ],
   imports: [
     BrowserModule,
