@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Norme } from '../models/norme.model';
-import { NormeService } from '../services/norme.service';
+import { Norme } from '../../../models/norme.model';
+import { NormeService } from '../../../services/norme.service';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-add-norme',
@@ -18,7 +19,7 @@ export class AddNormeComponent implements OnInit {
 
   submitted = false;
 
-  constructor(private normeService: NormeService) { }
+  constructor(private normeService: NormeService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,8 +27,8 @@ export class AddNormeComponent implements OnInit {
   saveNorme(): void {
     const data = {
       libelle: this.norme.libelle,
-      maxvalue: this.norme.maxValue,
-      minvalue: this.norme.minValue,
+      maxValue: this.norme.maxValue,
+      minValue: this.norme.minValue,
       unite: this.norme.unite
     }
 
@@ -37,7 +38,9 @@ export class AddNormeComponent implements OnInit {
           console.log(res);
           this.submitted = true;
         },
-        error: (e) => console.error(e)
+        error: (e) => console.error(e),
+        complete:()=>this.router.navigate(['/normes'])
+
       })
   }
 

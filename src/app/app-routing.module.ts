@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NormesComponent } from './normes/normes.component';
-import { NormeDetailsComponent } from './norme-details/norme-details.component';
-import { AddNormeComponent } from './add-norme/add-norme.component';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { NormesComponent } from './components/normes/normes.component';
+import { NormeDetailsComponent } from './components/normes/norme-details/norme-details.component';
+import { AddNormeComponent } from './components/normes/add-norme/add-norme.component';
 import { PatientDetailsComponent } from './components/patients/patient-details/patient-details.component';
 import { AddPatientComponent } from './components/patients/add-patient/add-patient.component';
 import { PatientsComponent } from './components/patients/patients.component';
@@ -15,6 +15,7 @@ import {UpdateFournisseurComponent} from "./components/fournisseur/update-fourni
 import {EchantillonComponent} from "./components/echantillon/echantillon.component";
 import {AjoutEchantillonComponent} from "./components/echantillon/ajout-echantillon/ajout-echantillon.component";
 import {EchantillonDetailsComponent} from "./components/echantillon/echantillon-details/echantillon-details.component";
+import {PlanificationComponent} from "./components/planification/planification.component";
 
 const routes: Routes = [
   {path: "patients", component: PatientsComponent},
@@ -37,7 +38,9 @@ const routes: Routes = [
   {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
   {path: "echantillons", component: EchantillonComponent},
   {path: "addechantillon", component: AjoutEchantillonComponent},
-  {path: "echantillon-details/:id", component: EchantillonDetailsComponent}
+  {path: "echantillon-details/:id", component: EchantillonDetailsComponent},
+  {path: "planification", component: PlanificationComponent},
+
 
 ];
 

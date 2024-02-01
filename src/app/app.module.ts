@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { NormesComponent } from './normes/normes.component';
-import { AddNormeComponent } from './add-norme/add-norme.component';
-import { NormeDetailsComponent } from './norme-details/norme-details.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AddUserComponent } from './add-user/add-user.component';
@@ -36,6 +33,9 @@ import { DatePipe } from '@angular/common';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { AjoutFournisseurComponent } from './fournisseur/ajout-fournisseur/ajout-fournisseur.component';
 import {FournisseurService} from "./services/service-fournisseur.service";
+import { NormesComponent } from './components/normes/normes.component';
+import { AddNormeComponent } from './components/normes/add-norme/add-norme.component';
+import { NormeDetailsComponent } from './components/normes/norme-details/norme-details.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { AppComponent } from './app.component';
@@ -55,6 +55,7 @@ import { SearchPatientPipe } from './pipe/search-patient.pipe';
 import { SearchEchantillonPipe } from './pipe/search-echantillon.pipe';
 import { EchantillonDetailsComponent } from './components/echantillon/echantillon-details/echantillon-details.component';
 import {OutilService} from "./services/outil.service";
+import { PlanificationComponent } from './components/planification/planification.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import {OutilService} from "./services/outil.service";
     EchantillonComponent,
     AjoutEchantillonComponent,
     SearchPatientPipe,
-    EchantillonDetailsComponent
+    EchantillonDetailsComponent,
+    PlanificationComponent
   ],
   imports: [
     BrowserModule,
