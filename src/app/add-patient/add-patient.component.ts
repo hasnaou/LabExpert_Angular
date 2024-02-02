@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Patient } from '../models/patient.model';
 import { PatientService } from '../services/patient.service';
 import { DatePipe } from '@angular/common';
-
-
-
 @Component({
   selector: 'app-add-patient',
   templateUrl: './add-patient.component.html',
