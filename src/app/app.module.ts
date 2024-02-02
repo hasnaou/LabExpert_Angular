@@ -13,7 +13,9 @@ import { DatePipe } from '@angular/common';
 import { NormesComponent } from './normes/normes.component';
 import { AddNormeComponent } from './add-norme/add-norme.component';
 import { NormeDetailsComponent } from './norme-details/norme-details.component';
-import { AnalysesComponent } from './analyses/analyses.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,16 @@ import { AnalysesComponent } from './analyses/analyses.component';
     NormesComponent,
     AddNormeComponent,
     NormeDetailsComponent,
-    AnalysesComponent
+    UsersComponent,
+    UserDetailsComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-    ],
+  ],
   providers: [
     DatePipe
   ],
