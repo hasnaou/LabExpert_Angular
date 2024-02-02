@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Patient} from "../../../models/patient.model";
-import {Echantillon} from "../../../models/echantillon";
+import {Echantillon} from "../../../models/echantillon.model";
 import {PatientService} from "../../../services/patient.service";
 import {EchantillonService} from "../../../services/echantillon.service";
 import {ActivatedRoute, Router, RouterModule} from "@angular/router";
@@ -19,15 +19,7 @@ export class EchantillonDetailsComponent implements OnInit {
   showddiv=false;
   patient:Patient;
   submitted=false;
-  @Input() echantillon: Echantillon = {
-    outilEchantillonList: null,
-    idEchantillon:0,
-    patient:new Patient(),
-    utilisateur:"{id: 69}",
-    datePrelevement:new Date("2024-02-11"),
-    typeAnalyse:'',
-    status:StatusEchantillon.EnAttente
-  }
+  @Input() echantillon: Echantillon = new Echantillon();
 
   constructor(private patientService:PatientService,private router: Router,private datePipe: DatePipe,private echantillonService:EchantillonService,private route: ActivatedRoute) { }
 

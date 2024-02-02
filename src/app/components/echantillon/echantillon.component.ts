@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Echantillon} from "../../models/echantillon";
 import {EchantillonService} from "../../services/echantillon.service";
+import {Echantillon} from "../../models/echantillon.model";
 
 @Component({
   selector: 'app-echantillon',
@@ -9,7 +9,7 @@ import {EchantillonService} from "../../services/echantillon.service";
 })
 export class EchantillonComponent implements OnInit {
 
-  echantillons!:any;
+  echantillons?:Echantillon[];
   searchech: '';
   constructor(private echantillonService:EchantillonService) { }
 

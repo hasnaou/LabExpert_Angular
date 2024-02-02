@@ -2,6 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { PatientService } from './patient.service';
 import { Patient } from '../models/patient.model';
+import {Inject} from "@angular/core";
+import {environment} from "../../environments/environment";
 
 describe('PatientService', () => {
   let service: PatientService;
@@ -35,7 +37,7 @@ describe('PatientService', () => {
       expect(patients).toEqual(dummyPatients);
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/api/v1/patient');
+    const req = httpMock.expectOne(environment+"/patient");
     expect(req.request.method).toBe('GET');
     req.flush(dummyPatients);
   });
@@ -47,7 +49,7 @@ describe('PatientService', () => {
       expect(response).toBeTruthy();
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/api/v1/patient');
+    const req = httpMock.expectOne(environment+"/patient");
     expect(req.request.method).toBe('POST');
     req.flush({});
   });
@@ -59,7 +61,7 @@ describe('PatientService', () => {
       expect(response).toBeTruthy();
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/api/v1/patient');
+    const req = httpMock.expectOne(environment+"/patient");
     expect(req.request.method).toBe('PUT');
     req.flush({});
   });
@@ -71,7 +73,7 @@ describe('PatientService', () => {
       expect(response).toBeTruthy();
     });
 
-    const req = httpMock.expectOne(`http://localhost:8080/api/v1/patient/${patientId}`);
+    const req = httpMock.expectOne(environment+"/patient/${patientId}");
     expect(req.request.method).toBe('DELETE');
     req.flush({});
   });

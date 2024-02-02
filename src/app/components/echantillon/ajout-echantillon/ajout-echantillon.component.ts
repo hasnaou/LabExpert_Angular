@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PatientService} from "../../../services/patient.service";
 import {EchantillonService} from "../../../services/echantillon.service";
 import {Patient} from "../../../models/patient.model";
-import {Echantillon} from "../../../models/echantillon";
+import {Echantillon} from "../../../models/echantillon.model";
 import {StatusEchantillon} from "../../../enum/status-echantillon";
 import {OutilEchantillon} from "../../../models/outil-echantillon";
 import {OutilService} from "../../../services/outil.service";
@@ -31,17 +31,8 @@ export class AjoutEchantillonComponent implements OnInit {
   };
   listmateriel:OutilEchantillon[]=[];
   submitted=false;
-  echantillon: Echantillon = {
-    outilEchantillonList:[],
-    idEchantillon:0,
-    patient:new Patient(),
-    utilisateur:"{id: 69}",
-    datePrelevement:new Date("2024-02-11"),
-    typeAnalyse:'',
-    status:StatusEchantillon.EnAttente
-  }
+  echantillon: Echantillon = new Echantillon();
   constructor(private patientService:PatientService,private echantillonService:EchantillonService,private outilService:OutilService) { }
-
 
   ngOnInit(): void {
     this.retrievePatients();
