@@ -23,6 +23,7 @@ import {AddOutilComponent} from "./components/outils/add-outil/add-outil.compone
 import {UtilisateursComponent} from "./components/utilisateurs/utilisateurs.component";
 import {AddUtilisateurComponent} from "./components/utilisateurs/add-utilisateur/add-utilisateur.component";
 import {UpdateUtilisateurComponent} from "./components/utilisateurs/update-utilisateur/update-utilisateur.component";
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path: "patients", component: PatientsComponent},
@@ -72,7 +73,7 @@ const routes: Routes = [
   },
   {path: "echantillon-details/:id", component: EchantillonDetailsComponent},
   {path: "planification", component: PlanificationComponent},
-
+  {path: "login", component: LoginComponent}
 
 ];
 

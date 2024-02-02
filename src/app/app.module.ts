@@ -36,6 +36,7 @@ import {AddOutilComponent} from "./components/outils/add-outil/add-outil.compone
 import {UpdateUtilisateurComponent} from "./components/utilisateurs/update-utilisateur/update-utilisateur.component";
 import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
 import {ReactifService} from "./services/reactif.service";
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import {ReactifService} from "./services/reactif.service";
     AjoutEchantillonComponent,
     SearchPatientPipe,
     EchantillonDetailsComponent,
-    PlanificationComponent
+    PlanificationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
