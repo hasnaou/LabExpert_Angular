@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UsersComponent } from './users/users.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 import { NormesComponent } from './components/normes/normes.component';
 import { NormeDetailsComponent } from './components/normes/norme-details/norme-details.component';
 import { AddNormeComponent } from './components/normes/add-norme/add-norme.component';
@@ -28,6 +31,15 @@ const routes: Routes = [
   {path: "normes", component: NormesComponent},
   {path: "norme-details/:id", component: NormeDetailsComponent},
   {path: "add-norme", component: AddNormeComponent},
+  {path: "users", component: UsersComponent},
+  {path: "add-user", component: AddUserComponent},
+  {path: "user-details/:id", component: UserDetailsComponent},
+  {path: "fournisseurs", component: FournisseurComponent},
+  {path: "addfournisseur", component: AjoutFournisseurComponent},
+  {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},
+  {path: "echantillons", component: EchantillonComponent},
+  {path: "addechantillon", component: AjoutEchantillonComponent},
+  {path: "echantillon-details/:id", component: EchantillonDetailsComponent},
   {path: "fournisseurs", component: FournisseurComponent},
   {path: "addfournisseur", component: AjoutFournisseurComponent},
   {path: "updatefournisseur/:id", component: UpdateFournisseurComponent},

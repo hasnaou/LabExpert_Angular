@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddUserComponent } from './add-user/add-user.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { AppComponent } from './app.component';
@@ -51,6 +54,9 @@ import {ReactifService} from "./services/reactif.service";
     NormesComponent,
     AddNormeComponent,
     NormeDetailsComponent,
+    UsersComponent,
+    UserDetailsComponent,
+    AddUserComponent,
     FournisseurComponent,
     AjoutFournisseurComponent,
     UpdateFournisseurComponent,
