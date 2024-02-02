@@ -26,8 +26,8 @@ describe('PatientService', () => {
 
   it('should retrieve all patients', () => {
     const dummyPatients: Patient[] = [
-      { id: 1, nom: 'hasna', prenom: 'oubali', adresse: '123 lot', datenaissance: new Date(), sexe: 'Female', tel: '123456789' },
-      { id: 2, nom: 'ayoub', prenom: 'oubali', adresse: '456 Avenue', datenaissance: new Date(), sexe: 'Male', tel: '987654321' }
+      { id: 1, nom: 'hasna', prenom: 'oubali', adresse: '123 lot', dateNaissance: new Date(), sexe: 'Female', tel: '123456789' },
+      { id: 2, nom: 'ayoub', prenom: 'oubali', adresse: '456 Avenue', dateNaissance: new Date(), sexe: 'Male', tel: '987654321' }
     ];
 
     service.getAll().subscribe(patients => {
@@ -41,7 +41,7 @@ describe('PatientService', () => {
   });
 
   it('should create a new patient', () => {
-    const newPatient: Patient = { nom: 'New', prenom: 'Patient', adresse: '789 Road', datenaissance: new Date(), sexe: 'Male', tel: '555555555' };
+    const newPatient: Patient = { nom: 'New', prenom: 'Patient', adresse: '789 Road', dateNaissance: new Date(), sexe: 'Male', tel: '555555555' };
 
     service.create(newPatient).subscribe(response => {
       expect(response).toBeTruthy();
@@ -53,7 +53,7 @@ describe('PatientService', () => {
   });
 
   it('should update a patient', () => {
-    const updatedPatient: Patient = { id: 1, nom: 'Updated', prenom: 'Patient', adresse: '789 Road', datenaissance: new Date(), sexe: 'Male', tel: '555555555' };
+    const updatedPatient: Patient = { id: 1, nom: 'Updated', prenom: 'Patient', adresse: '789 Road', dateNaissance: new Date(), sexe: 'Male', tel: '555555555' };
 
     service.update(updatedPatient).subscribe(response => {
       expect(response).toBeTruthy();
