@@ -21,6 +21,8 @@ export class AjoutEchantillonComponent implements OnInit {
   outils:Outil[];
   selectedOutilQuantite:number=0;
   selectedOutil:Outil={
+    deleted: false,
+    fournisseurIdFournisseur: 0,
     idOutil:0,
     quantite:0,
     libelle:''
@@ -36,7 +38,7 @@ export class AjoutEchantillonComponent implements OnInit {
 
   ngOnInit(): void {
     this.retrievePatients();
-    this.outilService.getmateriels().subscribe(
+    this.outilService.getAllOutils().subscribe(
       // @ts-ignore
       data=>this.outils=data,
       error => {

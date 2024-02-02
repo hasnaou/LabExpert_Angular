@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { UsersComponent } from './users/users.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
-import { AddUserComponent } from './add-user/add-user.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { AppComponent } from './app.component';
@@ -28,6 +25,14 @@ import { NormesComponent } from './components/normes/normes.component';
 import { AddNormeComponent } from './components/normes/add-norme/add-norme.component';
 import { NormeDetailsComponent } from './components/normes/norme-details/norme-details.component';
 import { PlanificationComponent } from './components/planification/planification.component';
+import {ReactifsComponent} from "./components/reactifs/reactifs.component";
+import {OutilsComponent} from "./components/outils/outils.component";
+import {UtilisateursComponent} from "./components/utilisateurs/utilisateurs.component";
+import {AddUtilisateurComponent} from "./components/utilisateurs/add-utilisateur/add-utilisateur.component";
+import {AddOutilComponent} from "./components/outils/add-outil/add-outil.component";
+import {UpdateUtilisateurComponent} from "./components/utilisateurs/update-utilisateur/update-utilisateur.component";
+import {AddReactifComponent} from "./components/reactifs/add-reactif/add-reactif.component";
+import {ReactifService} from "./services/reactif.service";
 
 @NgModule({
   declarations: [
@@ -46,9 +51,6 @@ import { PlanificationComponent } from './components/planification/planification
     NormesComponent,
     AddNormeComponent,
     NormeDetailsComponent,
-    UsersComponent,
-    UserDetailsComponent,
-    AddUserComponent,
     FournisseurComponent,
     AjoutFournisseurComponent,
     UpdateFournisseurComponent,

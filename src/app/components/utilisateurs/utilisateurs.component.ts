@@ -20,8 +20,8 @@ export class UtilisateursComponent implements OnInit {
   ngOnInit(): void {
     this.utilisateurService.getAllUtilisateurs()
       .subscribe(
-        (utilisateurs: Utilisateur[]) => {
-          this.utilisateurs = utilisateurs;
+        data => {
+          this.utilisateurs = data;
         },
         (error) => {
           console.log(error);

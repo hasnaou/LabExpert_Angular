@@ -3,7 +3,7 @@
     <div class="col-xl-10 col-xxl-9">
       <div class="rf-register-form">
 
-        <form class="rg-form" >
+        <form class="rg-form" [formGroup]="formUtilisateur" >
           <h2>Ajouter un Utilisateur</h2>
 
           <div class="rf-input-container">
@@ -28,15 +28,13 @@
           </div>
           <div class="rf-input-container">
             <i class="fa fa-map-pin fa fa-key rf-icon"></i>
-            <input class="form-control rf-input-field" type="text" placeholder="telephone"  formControlName="adresse"/>
+            <input class="form-control rf-input-field" type="text" placeholder="telephone"  formControlName="tel"/>
           </div>
           <div class="rf-input-container">
             <i class="fa fa-map-pin fa fa-key rf-icon"></i>
-            <select class="form-select">
+            <select class="form-select" formControlName="role">
               <optgroup label="choisi le role d'un utilisateur">
-                <option value="12" selected="">Preleveur 1</option>
-                <option value="13">Preleveur 2</option>
-                <option value="14">Preleveur 3</option>
+                <option value="{{role}}" *ngFor="let role of [0,1,2]">{{ Role[role] }}</option>
               </optgroup>
             </select>
           </div>

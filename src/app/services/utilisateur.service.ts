@@ -9,7 +9,7 @@ import {Utilisateur} from "../models/utilisateur";
 })
 export class UtilisateurService {
   private url = environment.url;
-  private readonly ENDPOINT = "Utilisateur";
+  private readonly ENDPOINT = "utilisateur";
 
   constructor(
     private http: HttpClient

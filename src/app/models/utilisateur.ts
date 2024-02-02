@@ -1,3 +1,5 @@
+import {Role} from "../enum/role";
+
 export interface Utilisateur {
   idUtilisateur?: number;
   "nom": string;
@@ -6,7 +8,7 @@ export interface Utilisateur {
   "dateNaissance": Date,
   "tel": string,
   "adresse": string,
-  "role": string,
+  "role": Role,
   "password": string,
   "nomUtilisateur": string
 }

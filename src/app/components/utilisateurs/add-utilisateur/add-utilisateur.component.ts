@@ -5,6 +5,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UtilisateurService} from "../../../services/utilisateur.service";
 import {Utilisateur} from "../../../models/utilisateur";
 import {formatDate} from "@angular/common";
+import {Role} from "../../../enum/role";
 
 @Component({
   selector: 'app-add-utilisateur',
@@ -21,7 +22,7 @@ export class AddUtilisateurComponent implements OnInit {
     dateNaissance: new Date(),
     tel: "",
     adresse: "",
-    role: "",
+    role: null,
     nomUtilisateur: "",
     password: ""
   }
@@ -45,6 +46,7 @@ export class AddUtilisateurComponent implements OnInit {
   }
 
   addUtilisateur() {
+    console.log(this.formUtilisateur.value);
     this.serviceUtilisateur.addUtilisateur(this.formUtilisateur.value).subscribe(
       (response: Utilisateur) => {
         // this.serviceUtilisateur.addUtilisateur()
@@ -63,4 +65,6 @@ export class AddUtilisateurComponent implements OnInit {
     )
 
   }
+
+  protected readonly Role = Role;
 }
