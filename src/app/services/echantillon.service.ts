@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Echantillon} from "../models/echantillon";
 import {Observable} from "rxjs";
+import {Echantillon} from "../models/echantillon.model";
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +9,8 @@ import {Observable} from "rxjs";
 export class EchantillonService {
 
   constructor(private http:HttpClient,@Inject('url_echantillon') private url: string) { }
-  public getEchantillons(){
-    return this.http.get(this.url);
+  public getEchantillons():Observable<Echantillon[]>{
+    return this.http.get<Echantillon[]>(this.url);
   }
 
   public addEchantillon(echantillon:Echantillon){
@@ -19,7 +19,7 @@ export class EchantillonService {
   }
   public getEchantillonById(id:number):Observable<Echantillon>{
     // @ts-ignore
-    return this.http.get(this.url+"/"+id);
+    return this.http.get<Echantillon>(this.url+"/"+id);
   }
   public updateEchantillon(echantillon:Echantillon){
     return this.http.put(this.url,echantillon);

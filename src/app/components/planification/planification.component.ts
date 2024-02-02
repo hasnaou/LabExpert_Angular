@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EchantillonService} from "../../services/echantillon.service";
+import {AnalyseService} from "../../services/analyse.service";
+import {Analyse} from "../../models/analyse.model";
 
 @Component({
   selector: 'app-planification',
@@ -8,13 +10,15 @@ import {EchantillonService} from "../../services/echantillon.service";
 })
 export class PlanificationComponent implements OnInit {
 
-  echantillons!:any;
+  analyses?:Analyse[];
   searchech: '';
-  constructor(private echantillonService:EchantillonService) { }
+  constructor(private echantillonService:EchantillonService,private analyseservice:AnalyseService) { }
 
   ngOnInit(): void {
-    this.echantillonService.getEchantillons().subscribe(
-      data=>{this.echantillons=data;},
+    this.analyseservice.getanalyses().subscribe(
+      data=>{
+        this.analyses=data;
+        console.log(this.analyses)},
       error => {
         console.log(error);}
     );
