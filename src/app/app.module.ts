@@ -14,6 +14,8 @@ import { OutilsComponent } from './components/outils/outils.component';
 import { AddOutilComponent } from './components/outils/add-outil/add-outil.component';
 import { UtilisateursComponent } from './components/utilisateurs/utilisateurs.component';
 import { AddUtilisateurComponent } from './components/utilisateurs/add-utilisateur/add-utilisateur.component';
+import { UpdateUtilisateurComponent } from './components/utilisateurs/update-utilisateur/update-utilisateur.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { AddUtilisateurComponent } from './components/utilisateurs/add-utilisate
     OutilsComponent,
     AddOutilComponent,
     UtilisateursComponent,
-    AddUtilisateurComponent
+    AddUtilisateurComponent,
+    UpdateUtilisateurComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     ReactifService,

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddOutilComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   ngOnInit(): void {
   }
 
+  addOutil(){
+
+  }
 }
