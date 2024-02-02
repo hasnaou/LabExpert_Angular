@@ -33,7 +33,6 @@ export class UtilisateursComponent implements OnInit {
       this.utilisateurService.deleteUtilisateur(utilisateur.idUtilisateur)
         .subscribe(
           () => {
-            // this.fournisseurs.splice(this.fournisseurs.indexOf(f));
             this.utilisateurs?.splice(this.utilisateurs?.indexOf(utilisateur));
             console.log("l'utilisateur avec l'ID " + utilisateur.idUtilisateur + " a été supprimer");
           },
@@ -44,10 +43,6 @@ export class UtilisateursComponent implements OnInit {
           }
         )
     }
-
-  }
-
-  updateUtilisateur(idUtilisateur: number) {
 
   }
 }

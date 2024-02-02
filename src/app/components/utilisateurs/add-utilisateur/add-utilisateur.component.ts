@@ -47,7 +47,7 @@ export class AddUtilisateurComponent implements OnInit {
   addUtilisateur() {
     this.serviceUtilisateur.addUtilisateur(this.formUtilisateur.value).subscribe(
       (response: Utilisateur) => {
-        this.serviceUtilisateur.addUtilisateur()
+        // this.serviceUtilisateur.addUtilisateur()
         console.log("L'utilisateur a été ajouter avec success", response);
       },
       (error) => {
